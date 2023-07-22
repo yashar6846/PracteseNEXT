@@ -1,12 +1,9 @@
+import Navbar from './component/Navbar'
 import './globals.css'
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
-
-export const metadata: Metadata = {
-  title: 'Simple TodoApp',
-  description: 'simple todo app for learning next js 13',
+export const metadata = {
+  title: 'Next Todos',
+  description: 'Created for Server Actions practice',
 }
 
 export default function RootLayout({
@@ -16,7 +13,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className="dark:bg-slate-800">
+        <Navbar />  
+        <main className="mx-auto max-w-xl p-4 bg-stone-200 min-h-screen text-black">
+          {children}
+        </main>
+      </body>
     </html>
   )
 }

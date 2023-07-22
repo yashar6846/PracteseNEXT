@@ -2,7 +2,7 @@
 export default async function fetchTodos() {
 
     try {
-        const res = await fetch("https://im-donkey-default-rtdb.firebaseio.com/todos.json")
+        const res = await fetch("https://im-donkey-default-rtdb.firebaseio.com");
 
         const todos: Todo[] = await res.json()
 
